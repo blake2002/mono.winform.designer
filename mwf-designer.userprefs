@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="mwf-designer.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="deps/Mono.Design/class/System.Design/System.ComponentModel.Design.Serialization/CodeDomDesignerLoader.cs">
+    <Files>
+      <File FileName="deps/Mono.Design/build/common/Consts.cs.in" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System/System.ComponentModel.Design.Serialization/MemberRelationshipService.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System.Design/System.ComponentModel.Design.Serialization/DesignerSerializationManager.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System.Design/System.ComponentModel.Design.Serialization/CodeDomSerializer.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System/System.ComponentModel/INestedContainer.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System/System.ComponentModel/INestedSite.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System/System.ComponentModel/NestedContainer.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System.Design/System.ComponentModel.Design.Serialization/CodeDomComponentSerializationService.cs" Line="1" Column="1" />
+      <File FileName="deps/Mono.Design/class/System.Design/System.ComponentModel.Design.Serialization/CodeDomDesignerLoader.cs" Line="7" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

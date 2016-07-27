@@ -1,0 +1,199 @@
+2009-09-09  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Remove unneeded Toolbox code. We now support proper point-resize-click 
+	  control creation.
+
+2009-09-09  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Update Visual Studio project files.
+
+2009-09-09  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* deps/Mono.Design/generate-mono-design.py: Update for Python 3 and 2.6
+
+2009-09-09  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Add .txt extension to the text files
+
+2008-09-03  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* generate-mono-design.py: Update to reflect anonsvn viewvc update, 
+	which broke the downloading process.
+	* Mono.Design/Makefile: force-invoke generate-md rule else make doesn't.
+	I have no idea why.
+
+2008-09-03  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* CodeProvider.cs: Fix CreateUniqueMethodName.
+
+2008-09-03  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* CodeProvider.cs: Fix one more NRE in GetCompatibleMethods.
+
+2008-09-03  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* CodeProvider.cs: Don't assume that all definitions will be method 
+	definitions in the .Designer file. Fixes a NRE.
+
+2008-09-02  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* deps/Mono.Design/patches/DesignerHost-designer-type-replacement.patch, 
+	  deps/Mono.Design/patches/DesignerSerializationManager-serializer-type-replacement.patch:
+	  Fix the hunk headers, so that the patches actually apply.
+	* deps/Mono.Design/generate-mono-design.py: Report patching errors.
+	[Fixes bug #418197]
+
+2008-09-01  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* deps/Mono.Design/patches/DesignerHost-designer-type-replacement.patch, 
+	  deps/Mono.Design/patches/DesignerSerializationManager-serializer-type-replacement.patch:
+	Do not mix MSNET and Mono.Design designer/serializer types.
+
+2008-08-19  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Make the file path textbox readonly in the New File dialog.
+	[Fixes bug #417617]
+
+2008-07-28  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Misc fixes and improvements. 
+
+2008-07-27  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Add a mono-design-update build target to the Makefile to allow 
+	an user to regenerate Mono.Design with upstream System.Design.
+
+2008-07-27  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Remove a leftover CWL. 
+
+2008-07-27  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Fix the creation of new files.
+
+2008-07-24  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* DesignTime/CodeProvider.cs: Make the search for a code behind file 
+	case insensitive. 
+
+2008-07-23  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* UI/NewFileDialog.cs: Validate text entries.
+	 Patch by Guillaume Simart <gsimard@gmail.com>
+
+2008-07-21  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Integrate Mono.Design for building with Visual Studio.
+
+2008-07-18  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* UI/PropertyGrid.cs, UI/MainView.cs: Clear the propertygrid.
+
+2008-06-18  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* UI/PropertyGrid.cs: Handle removing of the root component.
+
+2008-03-11  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* DesignTime/CodeProviderDesignerLoader.cs: Guard against a NRE in 
+	ReportErrors if the error collection is null. 
+
+2008-03-02  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* Enable Undo, Redo, Cut, Copy, Paste, Delete as I've already implmented
+	those in System.Design.
+	* Much better code for the PropertyGrid
+	* Makefile: Fixes and improvements.
+	* Program.cs: Fix spacing.
+	* DesignTime/CodeProviderDesignerLoader.cs: Report errors only if 
+	we weren't successful.
+	* DesignTime/UndoRedoEngine.cs: Fix multi undo/redo operations.
+
+2008-01-07  Ivan N. Zlatev <contact@i-nz.net>
+
+	* UI/ToolBoxList/ToolBoxList.cs: 
+	 - Drop Docking of the categories for using custom layouting in order
+	 to show the categories in the order they were added.
+	 - Implement RemoveToolboxItem.
+	 - Drop NotImplementedExceptions in order to make it work on MSNET.
+	* DesignTime/ToolboxFiller.cs, Project/Workspace.cs, UI/MainView.cs:
+	 Move the Toolbox filling code out of the Workspace and create a 
+	 Mediator(?) between References and Toolbox.
+	* Project/References.cs: Provide add/remove notication.
+	* DesignTime/CodeProvider.cs, DesignTime/CodeProviderDesignerLoader.cs:
+	 NRefactory doesn't recognize between field and property reference, so
+	 we need to tell it in oder to get proper CodeExpressions generated.
+	* UndoRedoEngine.cs: Implemented.
+	* deps/ICSharpCode.NRefactory.dll: Update to 2.2.1.
+	* Makefile: fixes for building without Mono.Design.
+
+2007-10-24  Ivan N. Zlatev <contact@i-nz.net>
+
+	* Program.cs: More exception handling.
+	* UI/NewFileDialog.cs: Usability improvements.
+
+2007-09-26  Ivan N. Zlatev <contact@i-nz.net>
+
+	* DesignTime/CodeProviderDesignerLoader.cs: SetUIDirty to 
+	clear the errors.
+	* UI/ErrorListTabPage.cs, UI/ErrorList.cs: new TabPage.
+	* UI/MainView.cs: refactor to use the ErrorListTabPage.
+	* Project/Document.cs, UI/MainView.cs: Handle failed to 
+	load documents.
+	* Project/Document.cs: add disposing behavior.
+	* Project/Document.cs, Project/Workspace.cs, UI/MainView.cs:
+	Move document load/close logic to the workspace.
+	* Project/Workspace.cs, UI/MainView.cs: documents now can be
+	associated with a key object.
+	* UI/PropertyGrid.cs: NRE fixes.
+
+2007-09-19  Ivan N. Zlatev <contact@i-nz.net>
+
+	* UI/MainView.cs: Show the Errors tab.
+
+2007-09-18  Ivan N. Zlatev <contact@i-nz.net>
+
+	* DesignTime/CodeProviderDesignerLoader.cs: Make use of IUIService
+	to report errors.
+	* UI/ErrorList.cs: Add.
+
+2007-09-13  Ivan N. Zlatev <contact@i-nz.net>
+	
+	* UI/ReferencesDialog.cs: Allow referencing executables.
+	* UI/MainView.Designer.cs: Use FixedPanel layouting.
+
+2007-09-09  Ivan N. Zlatev <contact@i-nz.net>
+
+	* Makefile: fix build.
+
+2007-09-06  Jonathan Pobst <monkey@jpobst.com>
+
+	* UI/MainView.cs: Use Suspend/ResumeLayout for performance increase
+	when populating the toolbox.
+
+2007-09-06  Jonathan Pobst <monkey@jpobst.com>
+
+	* UI/ToolBoxList/ToolBoxGroupPanel.cs: After we muck around with
+	ControlAdded, we need another layout to fix everything up.
+
+2007-09-02  Ivan N. Zlatev <contact@i-nz.net>
+
+	* UI/ToolBoxList/*.cs: spaces to tabs.
+
+2007-09-02  Ivan N. Zlatev <contact@i-nz.net>
+
+	* UI/ToolBoxList/ToolBoxGroupHeader.cs: Make categories more
+	visually recognizable.
+
+2007-09-02  Ivan N. Zlatev <contact@i-nz.net>
+
+	* UI/ToolBoxList/ToolBoxList.cs: Rename default category 
+	from "All Controls" to "All".
+	* DesignTime/TypeResolutionService.cs: Implement ReferenceAssembly.
+	* Project/Workspace, UI/MainView.cs: Toolbox categorization. 
+
+2007-08-31  Ivan N. Zlatev <contact@i-nz.net>
+
+	* UI/ToolBoxList/*.cs: A new fancy Toolbox. Patch by J. Pobst.
+	* UI/Toolbox.cs, UI/Toolbox.Designer.cs: Delete old.
+	* all: Add license headers.

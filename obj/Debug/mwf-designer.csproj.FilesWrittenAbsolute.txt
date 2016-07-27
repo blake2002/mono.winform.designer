@@ -1,0 +1,8 @@
+/home/leo/mwf-designer/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/leo/mwf-designer/build/mwf-designer.exe.mdb
+/home/leo/mwf-designer/build/mwf-designer.exe
+/home/leo/mwf-designer/obj/Debug/mwf-designer.exe
+/home/leo/mwf-designer/obj/Debug/mwf-designer.exe.mdb
+/home/leo/mwf-designer/build/ICSharpCode.NRefactory.dll
+/home/leo/mwf-designer/build/Mono.Design.dll
+/home/leo/mwf-designer/build/Mono.Design.dll.mdb

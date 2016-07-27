@@ -1,0 +1,5 @@
+/home/leo/mwf-designer/deps/Mono.Design/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/leo/mwf-designer/deps/Mono.Design.dll.mdb
+/home/leo/mwf-designer/deps/Mono.Design.dll
+/home/leo/mwf-designer/deps/Mono.Design/obj/Debug/Mono.Design.dll
+/home/leo/mwf-designer/deps/Mono.Design/obj/Debug/Mono.Design.dll.mdb
